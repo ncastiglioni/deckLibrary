@@ -7,6 +7,7 @@ import java.util.Random;
 import java.util.logging.Logger;
 
 import com.test.vp.card.Card;
+import com.test.vp.card.FrenchCard;
 import com.test.vp.card.Suit;
 import com.test.vp.card.Value;
 
@@ -20,7 +21,7 @@ public class Deck {
 		Value[] values = Value.values();
 		for (Suit suit : suits) {
 			for (Value value: values) {
-				this.list.add(new Card(value, suit));
+				this.list.add(new FrenchCard(value, suit));
 
 			}
 		}
