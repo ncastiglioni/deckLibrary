@@ -9,6 +9,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		Deck deck = new Deck();
+		@SuppressWarnings("resource")
 		Scanner consoleOutput = new Scanner(System.in);
 
 		String mainMenu = ("Select a choice from the menu: \n"

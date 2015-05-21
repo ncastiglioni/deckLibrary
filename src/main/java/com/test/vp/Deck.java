@@ -15,7 +15,7 @@ public class Deck {
 		Suit[] suits = Suit.values();
 		for (Suit suit : suits) {
 			for (int i = 1; i < 13; i++) {
-				list.add(new Card(i, suit));
+				this.list.add(new Card(i, suit));
 
 			}
 		}
@@ -31,8 +31,9 @@ public class Deck {
 	 * @return Card
 	 */
 	public Card getTopCardDeck() {
-		Card card = list.get(list.size() - 1);
-		list.remove(card);
+		Card card = this.list.get(this.list.size() - 1);
+		this.list.remove(card);
+		log.info("Card = " + card);
 		return card;
 	}
 
@@ -40,7 +41,7 @@ public class Deck {
 	 * suffleDeck
 	 */
 	public void shuffleDeck() {
-		Collections.shuffle(list);
+		Collections.shuffle(this.list);
 	}
 
 	/**
@@ -50,13 +51,14 @@ public class Deck {
 	 */
 	public Card getCard() {
 		Random random = new Random();
-		int randomicNumber = random.nextInt(list.size());
-		Card card = list.get(randomicNumber);
-		list.remove(card);
+		int randomicNumber = random.nextInt(this.list.size());
+		Card card = this.list.get(randomicNumber);
+		this.list.remove(card);
+		log.info("Card = " + card);
 		return card;
 	}
 
 	public void printDeck() {
-		log.info(this.list.toString());
+		log.info("Deck size = "+ this.list.size() + " - Elements: "+ this.list.toString());
 	}
 }
