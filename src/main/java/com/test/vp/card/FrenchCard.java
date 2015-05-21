@@ -11,12 +11,12 @@ public class FrenchCard implements Card {
 		this.suit = suit;
 	}
 
-	public Value getValue() {
-		return value;
+	public String getValue() {
+		return value.toString();
 	}
 
-	public Suit getSuit() {
-		return suit;
+	public String getSuit() {
+		return suit.toString();
 	}
 
 	public void setValue(Value value) {
@@ -29,7 +29,7 @@ public class FrenchCard implements Card {
 
 	@Override
 	public String toString() {
-		return "Card [value=" + value + ", suit=" + suit + "]";
+		return "Card [" + value.toString() + ", " + suit.toString() + "]";
 	}
 
 	@Override
