@@ -1,10 +1,14 @@
-package com.test.vp;
+package com.test.vp.deck;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.logging.Logger;
+
+import com.test.vp.card.Card;
+import com.test.vp.card.Suit;
+import com.test.vp.card.Value;
 
 public class Deck {
 

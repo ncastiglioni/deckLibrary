@@ -8,6 +8,9 @@ import java.util.logging.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.test.vp.card.Card;
+import com.test.vp.deck.Deck;
+
 public class DeckTest {
 	private static final Logger log = Logger
 			.getLogger(DeckTest.class.getName());

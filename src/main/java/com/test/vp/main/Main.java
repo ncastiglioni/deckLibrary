@@ -2,7 +2,7 @@ package com.test.vp.main;
 
 import java.util.Scanner;
 
-import com.test.vp.Deck;
+import com.test.vp.deck.Deck;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package com.test.vp;
+package com.test.vp.card;
 
 public enum Value {
 	 TWO, THREE, FOUR, FIVE, SIX,
