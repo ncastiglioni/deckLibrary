@@ -2,21 +2,21 @@ package com.test.vp;
 
 public class Card {
 
-	private int number;
+	private Value value;
 	private Suit suit;
 
-	public Card(int number, Suit suit) {
+	public Card(Value value, Suit suit) {
 		super();
-		this.number = number;
+		this.value = value;
 		this.suit = suit;
 	}
 
-	public int getNumber() {
-		return number;
+	public Value getValue() {
+		return value;
 	}
 
-	public void setNumber(int number) {
-		this.number = number;
+	public void setValue(Value value) {
+		this.value = value;
 	}
 
 	public Suit getSuit() {
@@ -29,10 +29,11 @@ public class Card {
 
 	@Override
 	public String toString() {
-		return "Card [number=" + number + ", suit=" + suit.toString() + "]";
+		return "Card [value=" + value + ", suit=" + suit + "]";
 	}
 
 	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -42,13 +43,13 @@ public class Card {
 		if (getClass() != obj.getClass())
 			return false;
 		Card other = (Card) obj;
-		if (number != other.number)
-			return false;
 		if (suit != other.suit)
+			return false;
+		if (value != other.value)
 			return false;
 		return true;
 	}
-	
-	
+
+
 
 }
