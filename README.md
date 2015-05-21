@@ -21,7 +21,6 @@ Usage
 There is also a jar included in the repository, so it can be tested from the command line using the following command.
 Copy the jar file to a directory, and then from that directory type:
 
-C:\CustomInk\deckLibrary\target>java -cp deckLibrary-0.0.1-SNAPSHOT.jar com.test
-.vp.main.Main
+C:\CustomInk\deckLibrary\target>java -cp deckLibrary-0.0.1-SNAPSHOT.jar com.test.vp.main.Main
 
 It will appear the menu and select appropiate options.
