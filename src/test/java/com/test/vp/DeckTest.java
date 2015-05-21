@@ -28,25 +28,21 @@ public class DeckTest {
 	}
 
 	@Test
-	public void testGetCard() {
-		Card card = deck.getCard();
-		assertNotNull(card);
-		int indexOfCard = deck.getDeck().indexOf(card);
-		log.info("Get Card = " + card.toString() + "Index of card="
-				+ indexOfCard);
-		assertTrue(indexOfCard > 0 && indexOfCard < deck.getDeck().size());
-	}
-
-	
-
-	@Test
 	public void testTopCard() {
+		int originalSizeDeck = deck.getDeck().size();
 		Card card = deck.getTopCardDeck();
 		assertNotNull(card);
-		int index = deck.getDeck().indexOf(card);
-		log.info("First Card Deck is:" + card.toString()
-				+ "Index of First Card Deck is:=" + index);
-		assertTrue((deck.getDeck().size() - 1) == index);
+		log.info("First Card Deck is:" + card.toString());
+		assertTrue((deck.getDeck().size() + 1) == originalSizeDeck);
+	}
+
+	@Test
+	public void testGetCard() {
+		int originalSizeDeck = deck.getDeck().size();
+		Card card = deck.getCard();
+		assertNotNull(card);
+		log.info("Get Card = " + card.toString());
+		assertTrue((deck.getDeck().size() + 1) == originalSizeDeck);
 	}
 
 	@Test

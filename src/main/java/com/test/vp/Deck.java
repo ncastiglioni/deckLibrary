@@ -14,7 +14,7 @@ public class Deck {
 	public void initDeck() {
 		Suit[] suits = Suit.values();
 		for (Suit suit : suits) {
-			for (int i = 1; i < 13; i++) {
+			for (int i = 1; i <= 13; i++) {
 				this.list.add(new Card(i, suit));
 
 			}
