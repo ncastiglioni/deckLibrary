@@ -12,8 +12,8 @@ public class Deck {
 	private List<Card> list = new ArrayList<Card>();
 
 	public void initDeck() {
-		Suits[] suits = Suits.values();
-		for (Suits suit : suits) {
+		Suit[] suits = Suit.values();
+		for (Suit suit : suits) {
 			for (int i = 1; i < 13; i++) {
 				list.add(new Card(i, suit));
 
@@ -25,18 +25,26 @@ public class Deck {
 		return this.list;
 	}
 
-	public Card getFirstCardDeck() {
-		return list.get(0);
-	}
-
-	public Card getLastCardDeck() {
+	/**
+	 * get the card on the top of the deck
+	 * @return Card
+	 */
+	public Card getTopCardDeck() {
 		return list.get(list.size() - 1);
 	}
 
+	/**
+	 * suffleDeck 
+	 */
 	public void shuffleDeck() {
 		Collections.shuffle(list);
 	}
 
+	
+	/**
+	 * getCard gives a card from the deck and remove it from the deck
+	 * @return Card
+	 */
 	public Card getCard() {
 		Random random = new Random();
 		int randomicNumber = random.nextInt(list.size());

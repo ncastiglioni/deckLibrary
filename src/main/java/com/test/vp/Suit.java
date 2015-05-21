@@ -1,5 +1,5 @@
 package com.test.vp;
 
-public enum Suits {
+public enum Suit {
 	SPADES, HEARTS, DIAMONDS, CLUBS;
 }

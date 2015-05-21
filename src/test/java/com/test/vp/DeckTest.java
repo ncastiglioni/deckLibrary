@@ -37,19 +37,11 @@ public class DeckTest {
 		assertTrue(indexOfCard > 0 && indexOfCard < deck.getDeck().size());
 	}
 
-	@Test
-	public void testGetFirstCardDeck() {
-		Card card = deck.getFirstCardDeck();
-		assertNotNull(card);
-		int index = deck.getDeck().indexOf(card);
-		log.info("First Card Deck is:" + card.toString()
-				+ "Index of First Card Deck is:=" + index);
-		assertTrue(0 == index);
-	}
+	
 
 	@Test
-	public void testGetLastCardDeck() {
-		Card card = deck.getLastCardDeck();
+	public void testTopCard() {
+		Card card = deck.getTopCardDeck();
 		assertNotNull(card);
 		int index = deck.getDeck().indexOf(card);
 		log.info("First Card Deck is:" + card.toString()

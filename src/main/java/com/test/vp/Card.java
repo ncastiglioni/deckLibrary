@@ -3,9 +3,9 @@ package com.test.vp;
 public class Card {
 
 	private int number;
-	private Suits suit;
+	private Suit suit;
 
-	public Card(int number, Suits suit) {
+	public Card(int number, Suit suit) {
 		super();
 		this.number = number;
 		this.suit = suit;
@@ -19,11 +19,11 @@ public class Card {
 		this.number = number;
 	}
 
-	public Suits getSuit() {
+	public Suit getSuit() {
 		return suit;
 	}
 
-	public void setSuit(Suits suit) {
+	public void setSuit(Suit suit) {
 		this.suit = suit;
 	}
 
