@@ -5,6 +5,7 @@ Assumptions
 -----------
 - Deck has 52 elements (4 suits and 13 cards of each)
 - Each time a card is obtained (any get operation is removed from the deck)
+- For these implementation french deck is used.
 
 
 Libraries used
