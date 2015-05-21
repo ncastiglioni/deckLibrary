@@ -27,28 +27,33 @@ public class Deck {
 
 	/**
 	 * get the card on the top of the deck
+	 * 
 	 * @return Card
 	 */
 	public Card getTopCardDeck() {
-		return list.get(list.size() - 1);
+		Card card = list.get(list.size() - 1);
+		list.remove(card);
+		return card;
 	}
 
 	/**
-	 * suffleDeck 
+	 * suffleDeck
 	 */
 	public void shuffleDeck() {
 		Collections.shuffle(list);
 	}
 
-	
 	/**
 	 * getCard gives a card from the deck and remove it from the deck
+	 * 
 	 * @return Card
 	 */
 	public Card getCard() {
 		Random random = new Random();
 		int randomicNumber = random.nextInt(list.size());
-		return list.get(randomicNumber);
+		Card card = list.get(randomicNumber);
+		list.remove(card);
+		return card;
 	}
 
 	public void printDeck() {
