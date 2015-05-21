@@ -8,39 +8,42 @@ import java.util.logging.Logger;
 
 public class Deck {
 
-	private static final Logger log = Logger.getLogger( Deck.class.getName() );
+	private static final Logger log = Logger.getLogger(Deck.class.getName());
 	private List<Card> list = new ArrayList<Card>();
-	
-	public void initDeck(){
+
+	public void initDeck() {
 		Suits[] suits = Suits.values();
-		for(Suits suit:suits ){
-			for(int i=0; i<12;i++){
-				list.add(new Card(i+1, suit));
-				
+		for (Suits suit : suits) {
+			for (int i = 1; i < 13; i++) {
+				list.add(new Card(i, suit));
+
 			}
 		}
 	}
-	
-	public List<Card> getDeck(){
+
+	public List<Card> getDeck() {
 		return this.list;
 	}
-	
-	public Card getFirstCardDeck(){
-		return (list.get(list.size()-1));		
+
+	public Card getFirstCardDeck() {
+		return list.get(0);
 	}
-	
-	public List<Card> shuffleDeck(){
+
+	public Card getLastCardDeck() {
+		return list.get(list.size() - 1);
+	}
+
+	public void shuffleDeck() {
 		Collections.shuffle(list);
-		return list;
 	}
-	
-	public Card getCard(){
+
+	public Card getCard() {
 		Random random = new Random();
-		int randomicNumber= random.nextInt(list.size());
+		int randomicNumber = random.nextInt(list.size());
 		return list.get(randomicNumber);
 	}
-	
-	public void printDeck(){
+
+	public void printDeck() {
 		log.info(this.list.toString());
 	}
 }
